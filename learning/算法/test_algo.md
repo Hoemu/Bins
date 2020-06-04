@@ -15,6 +15,8 @@
 **进阶：**
 <font size=2> *你可以在常数空间复杂度内完成这个题目吗？（ 出于对空间复杂度分析的目的，输出数组不被视为额外空间。）*</font>
 
+**思想与<a herf="https://leetcode-cn.com/problems/trapping-rain-water/" style="color:red">接雨水</a>题目相似**
+
 ```C++
 class Solution {
 public:
