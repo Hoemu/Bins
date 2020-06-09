@@ -5,31 +5,51 @@
 &nbsp;&nbsp;&nbsp;每位球员担任 1 号位至 5 号位时的评分如下表所示。请你计
 &nbsp;&nbsp;&nbsp;算首发阵容 1号位至 5 号位的评分之和最大可能是多少？
 
+<img src="lan_img/test1.png" width="450">
+
 > 方法一：观察法
 >可直接从表中观察出答案. 
 
->　方法二：编程
->　把每一组值输入到程序中，取最大值，最后求和.
 
-```cpp
+
+> 提升：如果表不固定，求最后的的最大值.
+
+
+
+### 试题B
+
+**【题目】** 年号字串
+
+​	小明用字母 `A`对应数字 1`B`对应 2，以此类推，用 `Z`对应 26。对于 27
+​	以上的数字，小明用两位或更长位的字符串来对应，例如 `AA`对应27，`AB`对
+​	应`28`，`AZ`对应52，`LQ`对应329。
+​	请问2019对应的字符串是什么？
+
+
+
+### 试题C
+
+**【题目】** 数列求值
+	给定数列1,1,1,3,5,9,17,…，从第4项开始，每项都是前3项的和。求
+	第20190324项的最后4位数字。
+
+> 斐波那契数相同做法，`dp`问题
+
+```c++
 #include<iostream>
-#include<vector>
-#include<algorithm>
 using namespace std;
 
-int main(){
-	//初始化数组
-    vector<vector<int>>vi(5,vector<int>(20));
-    for(int i=0;i<3;i++){
-        for(int j=0;j<20;j++)
-            cin>>vi[i][j];
-    }
-    //算法库中的函数，调用得到最大值，也有对应的*min_element()
-    int max_=0;
-    for(int i=0;i<vi.size();i++){
-        
-    }
-    return 0;
+const int N = 20190324;
+int dp[N] = { 0 };
+
+int main() {
+	dp[0] = 1, dp[1] = 1, dp[2] = 1;
+	for (int i = 3; i < N; i++) {
+		dp[i] = (dp[i - 1] + dp[i - 2] + dp[i - 3])%10000;
+	}
+	cout << dp[N - 1];
+	getchar();
+	return 0;
 }
 ```
 
@@ -189,9 +209,19 @@ max<sub>i=1</sub><sup>n</sup>|a<sub>i</sub>|，请你通过不限次数的传递
 
 
 
-```c++
+> 求解方法：
+>
+> ​	求 max={|a<sub>1</sub>|，|a<sub>2</sub>|，&bull;&bull;&bull; ，|a<sub>n</sub>|}.
+>
+> ​	用前缀和表示: max={|S<sub>1</sub> - S<sub>0</sub>|，|S<sub>2</sub> - S<sub>1</sub>|，|S<sub>3</sub> - S<sub>2</sub>|，&bull;&bull;&bull;，|S<sub>n</sub> - S<sub>n-1</sub>|}.
+>
+> 
+>
+> ​	
 
-```
+### 
+
+
 
 
 
