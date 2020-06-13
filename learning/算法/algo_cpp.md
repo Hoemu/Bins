@@ -4,49 +4,45 @@
 
 #### `容器`
 
-**`map`**容器
-
-​					如：`map<char, int>mc;`
+* **`map`**容器
+  * 如：`map<char, int>mc;`
 
 ​						在`map`中，需要一个键和值，前者为键，后者为值
 
-​	相关函数：
+​		&bull; 相关函数：
 
-​	`map.find(value)`: 在`map`容器中寻找`value`这个值，如果存在就返回`value`的位置，否则返回`end`(最后一个迭代器)
+​			`map.find(value)`: 在`map`容器中寻找`value`这个值，如果存在就返回`value`的位置，否则返回`end`(最后一个迭代器)
 
-​	`map.count(value)`： 查找`map`中`value`是否存在，返回值`1`表示存在，`0`表示不存在
+​			`map.count(value)`： 查找`map`中`value`是否存在，返回值`1`表示存在，`0`表示不存在
 
-**`vector`**容器
-
-​					如：`vector<int>vi;`
+* **`vector`**容器
+  * 如：`vector<int>vi;`
 
 ​							在`vector`容器中，支持初始化.
 
-相关函数：
+​			&bull; 相关函数：
 
-​	`vi.size()`：查看容器中的元素大小.
+​				`vi.size()`：查看容器中的元素大小.
 
-​	`vi.resize(const size_t New_size,const int &val)`：可以接受两个参数.(可用于拷贝)
+​				`vi.resize(const size_t New_size,const int &val)`：可以接受两个参数.(可用于拷贝)
 
 
 
-成员：
+​		成员：
 
-`vi.capacity`：查看当前容器的大小.
+​		`vi.capacity`：查看当前容器的大小.
 
 
 
 #### `算法函数`
 
-**`accumulate()`**求和算法，返回求的总和
-
-​			如：`int sum = accumulate(nums.begin(), nums.end(), 0)`
+* **`accumulate()`**求和算法，返回求的总和
+  * 如：`int sum = accumulate(nums.begin(), nums.end(), 0)`
 
 ​					先初始化为0，然后再计算从第一个下标开始到最后一个下标结束的所有元素的和
 
-**`copy()`**可以复制一个数组到另外一个数组中
-
-​			如：`copy(nums1.begin(), nums1.end(), nums2.begin()+k)`
+* **`copy()`**可以复制一个数组到另外一个数组中
+  * 如：`copy(nums1.begin(), nums1.end(), nums2.begin()+k)`
 
 ​					意思是把`nums1`中的所有元素复制到`nums2`中`k`开始的到最后的位置
 
@@ -54,19 +50,17 @@
 
 
 
-**`count()`**计数函数
-
-​			如：`count(nums.begin(), nums.end(), value)`
+* **`count()`**计数函数
+  * 如：`count(nums.begin(), nums.end(), value)`
 
 ​					在`nums`这个容器中寻找`value`这个值，返回查找到的*个数*
 
 
 
-**`next_permutation()`**和**`prev_permutation()`**函数
+* **`next_permutation()`**和**`prev_permutation()`**函数
 
-​			此函数为全排列函数
-
-* 用法如下：
+  * 此函数为全排列函数
+  * 用法如下：
 
 * ```c++
   int ar[3]={1,2,3};
@@ -76,39 +70,34 @@
   //同时，支持容器操作.
   ```
 
-* `next_permutation()`和`prev_permutation()`的区别：
+  * `next_permutation()`和`prev_permutation()`的区别：
   * 前者为输出比初始序列大的序列.
   * 后者为输出比初始序列小的序列.
 
 
 
-**`exp()`**函数
-
-​			如：`exp(1)`，此函数接受一个参数，代表着 `lnx`，其中`x`代表未知数
+* **`exp()`**函数
+  *  如：`exp(1)`，此函数接受一个参数，代表着 `lnx`，其中`x`代表未知数
 
    				`exp(1)`=`2.71828`，以 e 为底的**对数函数**
 
-**`find()`**从一个容器中寻找某一个元素
-
-​			如：`find(vi.begin(), vi.end(),num)`
+* **`find()`**从一个容器中寻找某一个元素
+  * 如：`find(vi.begin(), vi.end(),num)`
 
 ​					在`vi`这个容器中寻找`num`这个元素，如果存在就返回1，不存在就返回尾后迭代器
 
-**`earse()` **删除容器中的元素(一般为容器的成员函数)
-
-​			如：`nums.earse(nums.begin()+k, nums.end())`
+* **`earse()` **删除容器中的元素(一般为容器的成员函数)
+  * 如：`nums.earse(nums.begin()+k, nums.end())`
 
 ​					删除从`k`开始的元素到最后的位置
 
-**`insert()`**插入一段元素(一般为容器的成员函数)
-
-​			如：`st.insert(nums.begin(), i)`
+* **`insert()`**插入一段元素(一般为容器的成员函数)
+  * 如：`st.insert(nums.begin(), i)`
 
 ​					把一个元素`i`插入到容器的第一个位置(`i`的元素要和容器的类型相同)
 
-**`*max_element()`**寻找最大值,并返回最大值
-
-​			如：`*max_element(nums.begin(), nums.end());`
+* **`*max_element()`**寻找最大值,并返回最大值
+  * 如：`*max_element(nums.begin(), nums.end());`
 
 ​					在这里，需要两个迭代器来计算哪一段的最大值
 
@@ -116,50 +105,47 @@
 
 ​					而在这里，传送的实参是一个数组，k 为下标，同样可以计算出一个数组中的最大值
 
-**`max()`**比较大小函数
-
-​			如：`max(a,b)`对`a`和`b`进行比较，返回大的值
+* **`max()`**比较大小函数
+  *  如：`max(a,b)`对`a`和`b`进行比较，返回大的值
 
 ​			*C++11新特性：*
 
 ​			`max({a,b,c})`对`{ }`里面的值进行比较，返回大的值
 
-**`min()`**比较大小函数
+* **`min()`**比较大小函数
 
 ​			和上面`max`函数相反，`min`函数是返回小的值，同时也满足*C++11的新特性*
 
-**`*min_element()`**寻找最小值
+* **`*min_element()`**寻找最小值
 
 ​					用法和`*max_element()`相同，唯一不同的是返回值
 
-**`memset()`**把指定的一块内层初始化为一个相同的值
+* **`memset()`**把指定的一块内层初始化为一个相同的值
+  *  原型：`extern void *memset(void *buffer, int c, int count)`
 
-​				原型：`extern void *memset(void *buffer, int c, int count)`
+  *  例：
 
-​				例：
+  * ```c++
+    int arr[2][4];
+    memset(arr,0,sizeof(array));
+    ```
 
-```c++
-int arr[2][4];
-memset(arr,0,sizeof(array));
-```
+    
 
 
 
-**`reverse()`**倒转函数
-
-​					如：`reverse(st.begin(), st.end())`
+* **`reverse()`**倒转函数
+  *  如：`reverse(st.begin(), st.end())`
 
 ​							可以把字符串、数组中的元素倒转
 
-**`sort()`**排序算法，无返回值
-
-​			如：`sort(nums.begin(), nums.end())`
+* **`sort()`**排序算法，无返回值
+  *  如：`sort(nums.begin(), nums.end())`
 
 ​					排序从第一个下标开始到最后以一个元素
 
-**`__gcd()`**求最大公约数
-
-​					如：`__gcd(a,b)`；
+* **`__gcd()`**求最大公约数
+  *  如：`__gcd(a,b)`；
 
 ​						在此函数中，a 和 b 的类型要一样，可以用的类型`int`和`long long`
 
@@ -169,21 +155,19 @@ memset(arr,0,sizeof(array));
 
 ​		在Ｃ＋＋中，可以使用关于串的一些函数
 
-**`substr()`**得到字符串中某一段子串
-
-​			如：`str.substr(0, 5)`
+* **`substr()`**得到字符串中某一段子串
+  * 如：`str.substr(0, 5)`
 
 ​				得到字符串`str`中从0开始到5的子串
 
-**`to_string()`** 可以把其他类型转化成字符串类型
+* **`to_string()`** 可以把其他类型转化成字符串类型
 
-**`itoi()&atoi()`**整形字符串(某进制)的相互转化
-
-​			如：`itoi(num, str, 2)`
+* **`itoi()&atoi()`**整形字符串(某进制)的相互转化
+  * 如：`itoi(num, str, 2)`
 
 ​					在上述中，`num`为整形`(int)`，`str`为缓存区，用于保存转化后的字符串`(char* Buffer)`，`2`为要转化的进制数`(int)`
 
-​			如：`atoi(str.c_str())`
+​		&bull; 如：`atoi(str.c_str())`
 
 ​					`str`为`string`类型
 
@@ -218,6 +202,12 @@ c_str()函数返回一个指向正规C字符串的指针常量, 内容与本stri
   	return 0;
   }
   ```
+
+**`sscanf()`**函数
+
+* 最多的用法就是把字符串转化为其他类型.
+  * `sscanf(str.c_str(), "%d-%d-%d", &year, &month, &day )`，在这里面把字符串中的相关数字的字符转化为数字.
+
 
 
 ### `不常用数据类型`
