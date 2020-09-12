@@ -1,7 +1,6 @@
 import matplotlib.pyplot as plt
 import numpy as np
 import math
-import pandans
 
 x = np.linspace(math.pi, 30.0, 10000)
 y = np.sinh(x)
