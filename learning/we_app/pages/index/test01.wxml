@@ -1,0 +1,23 @@
+<!--pages/index/test01.wxml-->
+<!-- <view>{{number}}</view> -->
+<view>
+  <text>输入第一个名字：</text>
+  <input bindchange="inputchange1"></input> 
+</view>
+<view>
+  <text>输入第二个名字：</text>
+  <input bindchange="inputchange2"></input>
+</view>
+
+<button bindtap="match">匹配</button>
+<view>
+  <view>显示结果：{{result}}</view>
+</view>
+
+
+<!-- <text wx:for="{{array}}">[{{index}}:{{item}}],</text>
+<view wx:for="{{ar}}">{{index}}:{{item.id}} {{item.val}}</view>
+<view wx:if="{{score >= 60}}">"高级"</view>
+<view wx:elif="{{score < 60 && score >= 30}}">"中等"</view>
+<view wx:else="{{score < 30}}">"低级"</view>
+<view>{{score > 60 ? "AC":"TLE"}}</view> -->

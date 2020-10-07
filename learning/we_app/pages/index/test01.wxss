@@ -1,0 +1,17 @@
+/* pages/index/test01.wxss */
+view{
+  margin:50rpx;/*宽度和高度*/
+}
+
+input{
+  /* border: 2rpx solid; 所有*/
+  width: 500rpx;
+  border-bottom: 2rpx solid;
+  margin-top: 20rpx;
+}
+
+button{
+  margin: 50rpx;
+  color: rgb(23, 23, 24);
+  background-color: rgb(191, 194, 182);
+}
