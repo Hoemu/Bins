@@ -1,0 +1,29 @@
+document.writeln("<style>");
+document.writeln("	.lf-logo { float:left; width: 19%; }");
+document.writeln("	.lf-logo img { width:100%; height:auto; }");
+document.writeln("	.rt-logo img { width:80%; height:auto; }");
+document.writeln("	.rt-logo { float:right; width: 17%; }");
+document.writeln("	.footer-box { width:1000px; height:auto; margin:0 auto; }");
+document.writeln("	.footer { text-align:center !important;padding: 0;height: 50px;line-height: 50px;color: #4A3737;font-size: 14px;font-family: Arial;}");
+document.writeln("	@media screen and (min-width:0px) and (max-width: 767px) {");
+document.writeln("		.footer { text-align:center !important; height:auto;}");
+document.writeln("		.footer-box { width:100%; height:auto; margin:0 auto; line-height: 24px; padding-top: 10px;  }");
+document.writeln("		}");
+document.writeln("	</style>");
+/*document.writeln("    <div class=\'footer\'>");*/
+document.writeln("    <div class=\'footer-box\'>");
+document.writeln("    <div class=\'lf-logo domPC\'><img src=\'http://www.newsimg.cn/french/amerique_du_nord/20170505/img/l-logo.png\'/></div>");
+document.writeln("     &nbsp;&nbsp;Copyright &copy; 2000-"+new Date().getFullYear()+" XINHUANET.com All rights reserved.");
+document.writeln("     <div class=\'rt-logo domPC\'><img src=\'http://www.newsimg.cn/french/amerique_du_nord/20170505/img/rt-logo.png\'/></div>");
+document.writeln("     </div>");
+/*document.writeln("     </div>");*/
+/*.footer {
+    padding: 0;
+    background: #f8f7f3;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    color: #4A3737;
+    font-size: 14PX;
+    font-family: Arial;
+}*/

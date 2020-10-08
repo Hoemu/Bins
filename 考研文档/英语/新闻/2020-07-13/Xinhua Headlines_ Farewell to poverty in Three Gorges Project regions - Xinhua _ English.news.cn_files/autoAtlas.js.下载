@@ -1,0 +1,25 @@
+// JavaScript Document
+$(function(){
+	console.log(typeof(isPhotoAlbum))
+	if (typeof(isPhotoAlbum)!=="undefined"){
+		var swiperHtml = '<div class="device" style="display:block"> <a class="arrow-left domPC" href="#"></a> <a class="arrow-right domPC" href="#"></a><div class="swiper-container"><div class="swiper-wrapper">';
+		$("#tuji img").each(function(){
+			swiperHtml += '<div class="swiper-slide"><img src="' + $(this).attr("src") + '"><div class="swiper-title">' + $(this).parent().next().find("span").html() + '</div></div>';
+		})
+		swiperHtml += '</div></div><div class="pagination"></div></div>';
+		$(".content").prepend(swiperHtml)
+				
+		var mySwiper = new Swiper('.device .swiper-container',{
+			pagination: '.device .pagination',
+			loop:true,
+			grabCursor: true,
+			paginationClickable: true,
+			paginationType : 'fraction',
+			autoplay: 5000,	
+			nextButton: '.device .arrow-right',
+            prevButton: '.device .arrow-left',
+			autoHeight: true,
+		})
+		
+	}
+})

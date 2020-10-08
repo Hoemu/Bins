@@ -1,0 +1,234 @@
+@charset "utf-8";
+/* CSS Document */
+input { outline: none }
+* { font-family: Georgia; }
+.fl { float: left; }
+.fr { float: right; }
+a:hover { color: #00b1eb; }
+.domPC { display: block; }
+.domMobile { display: none; }
+.hide { display: none; }
+.con_box { width: 1000px; height: auto; overflow: hidden; margin: 0 auto; }
+.line_box { width: 100%; height: auto; overflow: hidden; }
+/* 顶部导航 */
+.nav { width: 100%; height: 55px; background: #164c88; position: fixed; top: 0; z-index: 60; }
+#nav { width: 1000px; height: 55px; margin: 0 auto; }
+#nav .on { background: #313131; }
+#nav .red { color: #ff4040; }
+#nav li { float: left; display: block; background: none; position: relative; z-index: 20; border-left: 1px solid #8ba6c4; }
+#nav li.bor { border-right: 1px solid #8ba6c4; }
+#nav li span.jt { font-family: Georgia; padding-left: 8px; }
+#nav li a { display: block; padding: 0; font-weight: 700; line-height: 55px; text-decoration: none; color: #fff; zoom: 1; padding: 0px 13px 0 13px; }
+#nav li a:hover, #nav li a.hov { background-color: #313131; color: #fff; }
+#nav ul { position: absolute; left: 1px; display: none; margin: 0; padding: 0; list-style: none; }
+#nav ul li { width: 150px; float: left; border-top: 1px solid #eee; text-align: left; background: #c4d5e8; }
+#nav ul li:hover { }
+#nav ul a { display: block; height: 20px; line-height: 20px; padding: 8px 5px; color: #666; font-weight: normal; }
+#nav ul a:hover { background: #eee; text-decoration: none; color: #000; }
+/*END*/               
+/*logo*/ 
+.con_logo { width: 100%; height: 100px; border-bottom: 1px solid #d3d3d3; margin-top: 25px; margin-bottom: 14px; padding-top: 60px; }
+.logo { width: 479px; height: 75px; }
+.date { width: 200px; height: auto; /*background: url(http://www.xinhuanet.com/english/20161108new/images/clock.jpg) no-repeat left center;*/ padding-left: 25px; margin: 40px 0 0 80px; }
+#Date { font-family: Arial; font-size: 14px; color: #434343; }
+.sreach_box { width: 196px; height: auto; margin: 0 0 0 20px; }
+.sreach_v1 { width: 150px; height: 20px; border: 1px solid #d3d3d3; border-right: none; }
+.username { width: 150px; height: 20px; border: none; }
+.sreach_v2 { width: 30px; height: 20px; border: 1px solid #d3d3d3; border-left: none; padding: 5px 5px 0px 0px; }
+.slect_box { float: right; }
+.slect { border: none; outline: none; width: 80px; font-weight: bold;cursor:pointer;}
+.sreach { margin-top: 15px; }
+/*END*/
+/*Explore*/
+.explore_box { width: 100%; height: 420px; background: #3e3e3e; margin-top: 35px; margin-bottom: 25px; }
+.exp_tit { width: 260px; height: 24px; font-size: 24px; color: #fff; line-height: 24px; padding-top: 146px; }
+.exp_con { list-style: none; width: 660px; height: auto; margin-top: 45px; }
+.exp_con li { float: left; width: 140px; height: 340px; overflow: hidden; }
+.exp_con li + li { margin-left: 33px; }
+.exp_con_tit1 { width: 81px; text-align: center; font-size: 24px; color: #fff; border: 1px solid #e5e5e5; padding: 5px; -moz-border-radius: 15px; -webkit-border-radius: 15px; border-radius: 15px; }
+.exp_con_tit2 { width: 100px; text-align: center; font-size: 24px; color: #fff; border: 1px solid #e5e5e5; padding: 5px; -moz-border-radius: 15px; -webkit-border-radius: 15px; border-radius: 15px; }
+.exp_con_tit3 { width: 70px; text-align: center; font-size: 24px; color: #fff; border: 1px solid #e5e5e5; padding: 5px; -moz-border-radius: 15px; -webkit-border-radius: 15px; border-radius: 15px; }
+.list14 { list-style: inherit; width: 100%; height: auto; overflow: hidden; padding-top: 25px; }
+.list14 li { height: 24px; font-size: 14px; color: #fff; line-height: 24px; }
+.list14 li a { color: #fff; }
+.list14 li + li { margin-left: 0; margin-top: 5px; }
+.main { width: 1000px; margin: 0 auto; }
+.main-left { width: 650px; float: left; }
+.wzzy { font-size: 14px; color: #636767; line-height: 34px; padding: 15px 0; }
+.wzzy i { padding: 0 5px; font-style: normal; }
+.Btitle { font-size: 34px; line-height: 42px; font-weight: normal; }
+.content { border-top: 1px solid #ccc; padding: 30px 0 10px 0; margin-top: 20px; font-family: Arial; }
+.content p { font-family: Arial; line-height: 26px; color: #404040; padding: 15px 0; font-weight: normal; width:900px; margin:0 auto; }
+.content p a { font-family: Arial; }
+.content img { max-width: 900px; height: auto; display:block; margin:0 auto; }
+.more-con { }
+.mor-kw { font-size: 16px; font-family: Arial; padding-bottom: 20px; border-bottom: 1px solid #ccc; height:30px; text-align:right; }
+.mor-kw span { padding-right: 10px; }
+.mor-kw i { padding: 5px; background: #3ec7ea; font-family: Arial; color: #fff; }
+.mor-kw i a { font-family: Arial; color: #fff; }
+.mor-mk { padding-top: 20px; width: 530px; float: left; }
+.mor-mk ul { margin-top: 15px; }
+.mor-mk ul li { position: relative; line-height: 34px; margin-bottom: 10px; }
+.mor-mk ul li i { width: 5px; height: 5px; background: #42a4ea; position: absolute; left: 5px; top: 16px; margin-top: 0px; margin-left: 0px; }
+.mor-mk ul li h3 { font-weight: normal; padding-left: 20px; font-size: 18px; }
+.mor-tp { padding-top: 20px; width: 430px; float: right; }
+.mor-tp ul { margin-top: 13px; overflow: hidden; }
+.mor-tp li { width: 210px; float: left; }
+.mor-tp li + li { margin-left: 10px; }
+.mor-tp li h3 { font-size: 16px; padding-top: 5px; line-height: 18px; font-weight: normal; }
+.mor-tp li img { width: 210px; height: 140px; display: block; }
+.main-right { width: 320px; float: right; }
+.lmt { font-size: 24px; color: #05b3fc; padding: 10px 0; font-family: Arial; }
+.lmt a { color: #05b3fc; font-family: Arial; }
+.imgbox { margin-top: 30px; }
+.imgbox .lmt { background: #4abcf7; color: #fff; padding-left: 15px; }
+.imgbox .lmt a { color: #fff; }
+.imgbox ul { margin-top: 16px; overflow: hidden; }
+.imgbox li { width: 240px; float: left; }
+.imgbox li + li { margin-left: 13px; }
+.imgbox li p { font-size: 16px; padding-top: 10px; line-height: 18px; font-weight: normal; color: #484848;}
+.imgbox li p a { color: #484848; }
+.imgbox li img { width: 240px; height: 137px; display: block; }
+.dask { position: relative; }
+.dask .picleft { position: absolute; left:-85px; top: 40%; width: 85px; height: 85px; background: url(http://www.xinhuanet.com/xilan/img0618/picArrow.png) -85px 0 no-repeat; display: none; }
+.dask .picright { position: absolute; right:-85px; top: 40%; width: 85px; height: 85px; background: url(http://www.xinhuanet.com/xilan/img0618/picArrow.png) 0 0 no-repeat; display: none; }
+.textbox li { padding: 5px 0 10px; overflow: hidden; color: #484848; font-family: Arial; }
+.textbox li a { color: #484848; font-family: Arial; }
+.textbox li i { font-style: normal; color: #05b3fc; font-family: Arial; padding-right: 5px; }
+.topVideo { position: relative; }
+.topVideo-fixed { position: fixed; bottom: 50%; right: 50%; width: 320px!important; height: 200px!important; /* height: 201px; */ margin-right: -510px!important; z-index: 99; background: #333333; padding: 5px; margin-bottom: -406px; }
+.topVideo-fixed iframe { width: 320px!important; height: 200px!important; margin: 0px!important; z-index: 9; position: absolute; }
+.topVideo-tit { display: none; }
+.topVideo-fixed .topVideo-tit { width: 312px; height: 32px; padding-left: 18px; background: #333; cursor: pointer; display: block; line-height: 34px; color: #fff; font-size: 14px; position: absolute; left: 0; top: 0px; z-index: 8; }
+.topVideo-tit-cont { display: inline-block; float: left; width: 220px; height: 32px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.topVideo-closeBtn { display: inline-block; float: right; padding-right: 11px; cursor: pointer; color: #b2b2b2; }
+.backtotop { display: none; position: fixed; right: 50%; bottom: 50%; z-index: 10; width: 50px; height: 40px; border: 1px solid #c5c5c5; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; background-color: #f6f6f6; overflow: hidden; cursor: pointer; margin-right: -564px!important; margin-bottom: -407px; }
+.backtotop:after { content: ""; display: block; width: 0; margin: 8px auto 0; border-left: 6px solid #f6f6f6; border-right: 6px solid #f6f6f6; border-top: 8px solid #f6f6f6; border-bottom: 8px solid #007bff; }
+#div_currpage { margin-top: 20px; }
+#div_currpage span { display: inline-block; width: 26px; height: 26px; font-size: 12px; font-weight: 600; color: #FFF; text-align: center; line-height: 26px; background-color: #348CEC; }
+#div_currpage a { display: inline-block; padding: 0 10px; height: 26px; font-size: 12px; color: #818181; text-align: center; line-height: 26px; background-color: #F1F3F5; transition: all .4s; -moz-transition: all .4s; ; /* Firefox 4 */ -webkit-transition: all .4s; /* Safari Ã¥â€™Å’ Chrome */ -o-transition: all .4s; ; /* Opera */ }
+#div_currpage a:hover { color: #FFF; background-color: #348CEC; }
+.bdshare-button-style1-24 { width:160px; float:left;}
+.xhapp { width:145px; float:right;}
+/*END*/
+/*footer*/
+.footer { width: 1000px; height: auto; margin: 0 auto; overflow: hidden; }
+.footer p { height: 40px; font-size: 14px; color: #313131; text-align: center; }
+.device {
+	width: 720px;
+	margin: 0 auto;
+	position: relative;
+}
+.device{ padding-top:30px; display: none;}
+.pagination { position:absolute; right:0; top:0; text-align:right; font-size:16px; font-weight:bold;}
+
+.device .arrow-left {
+	background: url(http://www.xinhuanet.com/english/xinhuanews/img/leftArrow.png) no-repeat left top;
+	background-size: 100% 100%;
+	position: absolute;
+	left: -120px;
+	top: 45%;
+	margin-top: -15px;
+	width: 80px;
+	height: 100px;
+}
+.device .arrow-right {
+	background: url(http://www.xinhuanet.com/english/xinhuanews/img/rightArrow.png) no-repeat left bottom;
+	background-size: 100% 100%;
+	position: absolute;
+	right: -120px;
+	top: 45%;
+	margin-top: -15px;
+	width: 80px;
+	height: 100px;
+}
+.device .swiper-container {
+	height: auto;
+	width: 720px;
+}
+.device .content-slide {
+	color: #fff;
+}
+.device .swiper-title {
+	font-size: 12pt;
+    font-family: "arial";
+    color: #337fe5;
+	margin-top:20px;
+}
+.device .swiper-wrapper img {
+	max-width: 720px;
+	height: auto;
+}
+#tuji{ display:none;}
+/*END*/
+ @media screen and (max-width: 767px) {
+.domPC { display: none; }
+.domMobile { display: block; }
+/* 顶部导航 */
+.topbox { padding: 0.5rem; }
+.topbox .eg-logo { width: 60%; height: auto; }
+.topbox .eg-logo img { width: 100%; height: auto; }
+.topbox .pc-logo { width: 15%; height: auto; margin-left: 8%; }
+.topbox .pc-logo img { width: 65%; height: auto; margin-top: 0.65rem; }
+.topbox .menu-logo { width: 15%; height: auto; }
+.topbox .menu-logo img { width: 65%; height: auto; margin-top: 0.65rem; }
+.topbox .menu-close { width: 15%; height: auto; }
+.topbox .menu-close img { width: 40%; height: auto; margin-top: 0.65rem; }
+.content { width: 100%; height: auto; position: relative; }
+.content p { width:100%;}
+.menubox { width: 100%; height: auto; position: absolute; left: 0; top: 8%; z-index: 50; background: #fff; }
+.list01 { width: 45%; height: auto; margin: 0.75rem 0 0.75rem 0; }
+.list01 li { font-size: 1.2rem; color: #00b7ee; margin-bottom: 0.25rem; }
+.list01 li a { color: #00b7ee; }
+.m-left { margin-left: 2%; }
+.m-right { margin-right: 2%; }
+.list01 .black { color: #000; }
+.list01 .red { color: #ee0016; }
+.list01 .red a { color: #ee0016; }
+/* END */
+.main { width: 96%; margin: 0 auto; }
+.main-left { width: 96%; margin: 0 auto; float: none; }
+.content img { width: 100% !important; height: auto !important; }
+.backtotop { right: 10px; bottom: 60px; margin-right: 0!important; margin-bottom: 0; }
+/* footer */
+.footer { width: 100%; border-top: 3px solid #e4e4e4; padding-top: 1.2rem; padding-bottom: 1.2rem; margin-top: 1.5rem; }
+.footer p { font-size: 1.2rem; text-align: center; }
+.pageVideo{ width:100%; height:260px;}
+
+.device {
+	width: 100%;
+	margin: 0 auto;
+	position: relative;
+}
+.device .arrow-left {
+	background: url(http://www.xinhuanet.com/english/xinhuanews/img/leftArrow.png) no-repeat left top;
+	background-size: 100% 100%;
+	position: absolute;
+	left: -120px;
+	top: 45%;
+	margin-top: -15px;
+	width: 80px;
+	height: 100px;
+}
+.device .arrow-right {
+	background: url(http://www.xinhuanet.com/english/xinhuanews/img/rightArrow.png) no-repeat left bottom;
+	background-size: 100% 100%;
+	position: absolute;
+	right: -120px;
+	top: 45%;
+	margin-top: -15px;
+	width: 80px;
+	height: 100px;
+}
+.device .swiper-container {
+	height: auto;
+	width: 100%;
+}
+.device .swiper-title {
+}
+.device .swiper-wrapper img {
+	width: 100%;
+	height: auto;
+}
+/* END */
+}

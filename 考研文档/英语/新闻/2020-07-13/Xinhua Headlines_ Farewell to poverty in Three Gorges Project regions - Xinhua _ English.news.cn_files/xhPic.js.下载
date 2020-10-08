@@ -1,0 +1,192 @@
+﻿var lefttmp;
+var righttmp;
+$(document).ready(function() {　
+    lefttmp = $("img", $("#leftar")).attr("src");
+    righttmp = $("img", $("#rightar")).attr("src");
+    leng = $("a", $("#div_currpage")).length;
+    if (leng != 0)
+    {
+        leng = leng - 1;
+        var nextLin = $("a", $("#div_currpage"))[leng].href;
+        var oneword = location.href + "#";
+        if (nextLin == oneword)
+        {
+            leng = leng - 1;
+            nextLin = $("a", $("#div_currpage"))[leng].href;
+        }
+        var currurl = location.href;
+        var underpd = currurl.substring(currurl.indexOf("c_") + 2, currurl.indexOf(".htm"));
+        if (underpd.indexOf("_") == -1)
+        {
+            prevLink = location.href;
+            nextLink = $("a", $("#div_currpage"))[0].href;
+            setTimeout("window.opener=null;window.location.href='" + nextLink + "'", 600000);
+        }
+        else
+        {
+            var currnum = currurl.indexOf(".htm");
+            var underlineindex = currurl.lastIndexOf("_") + 1;
+            var nextnum = nextLin.indexOf(".htm");
+            var underlinenext = nextLin.lastIndexOf("_") + 1;
+            var undernum = nextLin.substr(nextLin.indexOf("c_")).split("_").length - 1;
+            var temp = currurl.substring(underlineindex, currnum);
+            var nexttemp = nextLin.substring(underlinenext, nextnum);
+            var boolx = parseInt(temp, 10) > parseInt(nexttemp, 10);
+            if ((boolx) || (undernum == 1))
+            {
+                if ($("img", $("a", $("#content"))).length == 0)
+                {
+                    prevLink = nextLin;
+                    if (undernum == 1)
+                    {
+                        nextLink = nextLin;
+                    }
+                    else
+                    {
+                        nextLink = prevLink.substr(0, (prevLink.lastIndexOf("_"))) + ".htm";
+                    }
+                    setTimeout("window.opener=null;window.location.href='" + nextLink + "'", 600000);
+                }
+                else
+                {
+                    prevLink = nextLin;
+                    nextLink = $("a", $("#content"))[0].href;
+                }
+            }
+            else
+            {
+                var a_1 = $("#div_currpage a").eq(0).attr("href");
+                var a_2 = $("#div_currpage a").eq(1).attr("href");
+                if (a_1 == "#") prevLink = a_2;
+                else prevLink = $("a", $("#div_currpage"))[0].href;
+                nextLink = nextLin;
+            }
+        }
+    }
+    else
+    {
+        prevLink = location.href;
+        nextLink = location.href;
+    }
+    document.onkeydown = pageEvent;
+    function pageEvent(evt) {
+        evt = evt || window.event;
+        var key = evt.which || evt.keyCode;
+        if (key == 37) location = prevLink;
+        if (key == 39) location = nextLink;
+    };
+    var lefturl = prevLink;
+    var righturl = nextLink;
+    var imgurl = righturl;
+    var reg = /^{.+}$/gi;
+    var theBrowser = userBrowser();
+    $("img").each(function() {
+        if (reg.test($(this).attr("id"))) {
+            $(this).wrap("<div class='dask'></div>").parent().append("<a href='#' class='picleft'></a><a href='#' class='picright'></a>").parent().addClass("bigPic");
+            this.style.cursor = "pointer";
+            var width = $(this).width();
+            var w2 = width / 2;
+            var thisImage = $(this);
+            $(thisImage)[0].onmousemove = function() {
+                var n_offsetX;
+                var thisEvent = getEvent();
+                if (theBrowser == "Firefox") {
+                    var evtOffsets = getOffset(thisEvent);
+                    n_offsetX = evtOffsets.offsetX;
+                } else {
+                    n_offsetX = thisEvent.offsetX;
+                }
+                if (n_offsetX < w2) {
+                   /* var j = this.style.cursor;
+                    if (j.lastIndexOf('arr_left') < 0) {
+                        this.style.cursor = 'url(http://www.xinhuanet.com/photo/static/arr_left.cur),auto';
+                    }*/
+                    imgurl = lefturl;
+                } else if (n_offsetX > w2) {
+                   /* var j = this.style.cursor;
+                    if (j.lastIndexOf('arr_right') < 0) {
+                        this.style.cursor = 'url(http://www.xinhuanet.com/photo/static/arr_right.cur),auto';
+                    }*/
+                    imgurl = righturl;
+                } else {
+                    this.style.cursor = "pointer";
+                }
+            }
+            $(thisImage)[0].onmouseup = function() {
+                top.location = imgurl;
+            }
+            $(this).siblings(".picleft").attr("href", lefturl).siblings(".picright").attr("href", righturl);
+			$(".dask").hover(function(){
+				$(".dask .picleft,.dask .picright").show();
+			},function(){
+				$(".dask .picleft,.dask .picright").hide();
+			})
+        }
+    });　　　　
+    　　
+});
+function getEvent()
+ {
+    if (document.all) return window.event;
+    func = getEvent.caller;
+    while (func != null) {
+        var arg0 = func.arguments[0];
+        if (arg0)
+        {
+            if ((arg0.constructor == Event || arg0.constructor == MouseEvent) || (typeof(arg0) == "object" && arg0.preventDefault && arg0.stopPropagation))
+            {
+                return arg0;
+            }
+        }
+        func = func.caller;
+    }
+    return null;
+}
+function getOffset(evt)
+ {
+    var target = evt.target;
+    if (target.offsetLeft == undefined)
+    {
+        target = target.parentNode;
+    }
+    var pageCoord = getPageCoord(target);
+    var eventCoord = {
+        x: window.pageXOffset + evt.clientX,
+        y: window.pageYOffset + evt.clientY
+    };
+    var offset = {
+        offsetX: eventCoord.x - pageCoord.x,
+        offsetY: eventCoord.y - pageCoord.y
+    };
+    return offset;
+}
+function getPageCoord(element)
+ {
+    var coord = {
+        x: 0,
+        y: 0
+    };
+    while (element)
+    {
+        coord.x += element.offsetLeft;
+        coord.y += element.offsetTop;
+        element = element.offsetParent;
+    }
+    return coord;
+}
+function userBrowser() {
+    var browserName = navigator.userAgent.toLowerCase();
+    if (/msie/i.test(browserName) && !/opera/.test(browserName)) {
+        return "IE";
+    } else if (/firefox/i.test(browserName)) {
+        return "Firefox";
+    } else if (/chrome/i.test(browserName) && /webkit/i.test(browserName) && /mozilla/i.test(browserName)) {
+        return "Chrome";
+    } else if (/opera/i.test(browserName)) {
+        return "Opera";
+    } else if (/webkit/i.test(browserName) && !(/chrome/i.test(browserName) && /webkit/i.test(browserName) && /mozilla/i.test(browserName))) {
+        return "Safari";
+    } else {
+        return "unKnow";
+    }
+}

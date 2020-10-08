@@ -1,0 +1,92 @@
+  .mobileView{
+    display:none;
+  } 
+@media screen and (max-width: 1009px){
+  /*#showpc{
+    background-color: rgb(255, 255, 255); text-align: center; font-size: 1.6rem; display: block;
+   }*/
+  .mobileView{
+    display:none;
+  }
+  .showDesktop{
+    display:flex
+  }
+  .showDesktop-English{
+    width:20%;
+  }
+  .showDesktop-Chinese{
+    margin-left: 2%;
+    width: 20%;
+  }
+  .showDesktop-Desktop{
+    width: 42%;
+    margin-left: 13%;
+  }
+  .mobile-foot .mobile-miscs p.footer-p{
+    font-family:arial;
+    text-align:left
+  }
+}
+@media (min-width: 1010px){
+  /*#showpc{
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 1010;
+    opacity: 0.6;
+    width: 367px;
+    height: 95px;
+    overflow: hidden;
+    border-radius: 20px;
+    text-align: center;
+    background-color: #aaa;
+       font-size: 67px;
+    display: none;
+}*/
+  .mobileView{
+    width: 1010px;
+    margin: 10px auto;
+    overflow: hidden;
+    clear: both;
+}
+ .mobileView a{
+    color:#fff;
+}
+  .mobileView-language,.mobileView-mobile{
+    display:inline;
+  } 
+  .mobileView-button{
+    font-size: 22px;
+    border: 2px solid #5077aa;
+    width: 180px;
+    float: left;
+    line-height: 58px;
+    text-decoration: none;
+    margin: 20px 7px;
+    border-radius: 2px;
+    text-align: center;
+    font-family: "Arial";
+  }
+   .mvl-chinese,.mobileView-phone{
+    background-color: rgb(80, 119, 170);
+    color:#fff;
+}
+.mobileView-phone{
+    background-color: rgb(80, 119, 170);
+    margin-left:150px;
+    width:370px;
+    height:62px;
+}
+ .mobileView-phone img{
+    margin:10px;
+}
+.mvl-chinese{
+
+font-family:"Microsoft YaHei";
+}
+.mvl-english{
+color: #5077aa;
+margin-left:54px;
+}
+
+}
